@@ -1,0 +1,7 @@
+image: Visual Studio 2017
+clone_folder: C:\Projects\TestContinuousIntegration
+platform: x86
+configuration: Release
+build:
+  project: Project1.sln
+  verbosity: detailed
