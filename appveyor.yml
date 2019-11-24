@@ -12,4 +12,4 @@ build_script:
   - cd ..
   - cmake --build build_%CONFIGURATION% --config %CONFIGURATION%
 artifacts:
-  - path: 'build_*\*\*.exe'
+  - path: 'build_*\**\*.exe'
