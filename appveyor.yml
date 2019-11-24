@@ -5,6 +5,7 @@ configuration:
   - Debug
   - Release
 build_script:
+  - cmake --version
   - mkdir build_%CONFIGURATION%
   - cd build_%CONFIGURATION%
   - cmake ..
