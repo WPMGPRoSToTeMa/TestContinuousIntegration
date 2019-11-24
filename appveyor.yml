@@ -9,4 +9,5 @@ build_script:
   - cd ..
   - cmake --build build --config Debug
 artifacts:
-  - path: 'build\**\*.(dll|so)'
+  - path: 'build\bin\*.dll'
+  - path: 'build\**\*.so'
