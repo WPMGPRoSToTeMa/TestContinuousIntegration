@@ -3,10 +3,10 @@ clone_folder: C:\Projects\TestContinuousIntegration
 platform: x86
 configuration: Release
 build_script:
-  - mkdir build
-  - cd build
+  - mkdir build_%CONFIGURATION%
+  - cd build_%CONFIGURATION%
   - cmake ..
   - cd ..
-  - cmake --build build_$configuration --config $configuration
+  - cmake --build build_%CONFIGURATION% --config %CONFIGURATION%
 artifacts:
   - path: 'build_*\*\*.exe'
