@@ -1,6 +1,6 @@
 project(TestContinuousIntegration)
 
-add_executable(${PROJECT_NAME} Main.cxx)
+add_library(${PROJECT_NAME} MODULE Main.cxx)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
 foreach(config ${CMAKE_CONFIGURATION_TYPES})
