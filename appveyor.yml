@@ -2,6 +2,9 @@ image: Visual Studio 2017
 clone_folder: C:\Projects\TestContinuousIntegration
 platform: x86
 configuration: Release
-build:
-  project: Project1.sln
-  verbosity: detailed
+build_script:
+  - mkdir build
+  - cd build
+  - cmake ..
+  - cd ..
+  - cmake --build build --config Release
