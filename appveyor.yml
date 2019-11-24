@@ -8,3 +8,5 @@ build_script:
   - cmake ..
   - cd ..
   - cmake --build build --config Release
+artifacts:
+  - path: 'build\**\*.exe'
