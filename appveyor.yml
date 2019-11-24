@@ -1,15 +1,13 @@
-image: Visual Studio 2017
+image:
+  - Visual Studio 2017
+  - Ubuntu
 clone_folder: C:\Projects\TestContinuousIntegration
-platform: x86
-configuration:
-  - Debug
-  - Release
 build_script:
   - cmake --version
-  - mkdir build_%CONFIGURATION%
-  - cd build_%CONFIGURATION%
+  - mkdir build
+  - cd build
   - cmake ..
   - cd ..
-  - cmake --build build_%CONFIGURATION% --config %CONFIGURATION%
+  - cmake --build build --config Debug
 artifacts:
-  - path: 'build_*\**\*.dll'
+  - path: 'build\bin\*.*'
