@@ -7,6 +7,6 @@ build_script:
   - cd build
   - cmake ..
   - cd ..
-  - cmake --build build --config Release
+  - cmake --build build_$configuration --config $configuration
 artifacts:
-  - path: 'build\**\*.exe'
+  - path: 'build_*\*\*.exe'
