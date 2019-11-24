@@ -1,7 +1,6 @@
 image:
   - Visual Studio 2017
   - Ubuntu
-clone_folder: C:\Projects\TestContinuousIntegration
 build_script:
   - cmake --version
   - mkdir build
