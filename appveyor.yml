@@ -1,13 +1,16 @@
 image:
-  - Visual Studio 2017
   - Ubuntu
+install:
+  - sudo apt-get update
+  - sudo apt-get --assume-yes install gcc-multilib g++-multilib
 build_script:
-  - cmake --version
+  - wget https://ftp.gnu.org/gnu/gcc/gcc-7.4.0/gcc-7.4.0.tar.gz
+  - tar -xf gcc-7.4.0.tar.gz
+  - cd gcc-7.4.0
   - mkdir build
   - cd build
-  - cmake .. -DCMAKE_VERBOSE_MAKEFILE=1
-  - cd ..
-  - cmake --build build --config Debug
+  - ../libstdc++-v3/configure
+  - make -j
+  - cd ../..
 artifacts:
-  - path: 'build\bin\*.dll'
-  - path: 'build\bin\*.so'
+  - path: 'gcc-7.4.0/32/build/src/.libs/libstdc++.a'
