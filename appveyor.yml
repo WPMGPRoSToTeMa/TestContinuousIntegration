@@ -12,7 +12,7 @@ build_script:
   - cd build
   - mkdir build-gcc
   - cd build-gcc
-  - ../../gcc-7.4.0/configure --with-multilib-list=m32 --disable-shared --enable-languages=c,c++ --disable-host-shared --enable-threads=posix --with-cpu-32=i686 --disable-gnu-indirect-function --disable-bootstrap --disable-checking --disable-gnu-unique-object
+  - ../../gcc-7.4.0/configure --with-multilib-list=m32 --disable-shared --enable-languages=c,c++ --disable-host-shared --enable-threads=posix --disable-gnu-indirect-function --disable-bootstrap --disable-checking --disable-gnu-unique-object
   - make
   - cd ../..
 on_failure:
