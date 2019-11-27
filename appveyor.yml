@@ -15,4 +15,4 @@ build_script:
   - make
   - cd ../..
 on_failure:
-  - appveyor PushArtifact build/build-gcc/config.log
+  - appveyor PushArtifact build/build-gcc/x86_64-pc-linux-gnu/libgomp/config.log
