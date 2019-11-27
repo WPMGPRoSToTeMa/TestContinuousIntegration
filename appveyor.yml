@@ -4,6 +4,7 @@ install:
   - sudo apt-get update
   - sudo apt-get --assume-yes install gcc-multilib g++-multilib
   - sudo apt-get --assume-yes install libgmp-dev libmpfr-dev libmpc-dev
+  - sudo dpkg --add-architecture i386
 build_script:
   - wget https://ftp.gnu.org/gnu/gcc/gcc-7.4.0/gcc-7.4.0.tar.gz
   - tar -xf gcc-7.4.0.tar.gz
