@@ -9,7 +9,7 @@ build_script:
   - cd gcc-7.4.0
   - mkdir build
   - cd build
-  - ../libstdc++-v3/configure
+  - ../libstdc++-v3/configure --disable-shared
   - make -j
   - cd ../..
 artifacts:
