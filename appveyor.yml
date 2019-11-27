@@ -14,5 +14,5 @@ build_script:
   - ../../gcc-7.4.0/configure --with-multilib-list=m32 --disable-shared --enable-languages=c,c++ --disable-host-shared --enable-threads=posix --with-cpu-32=i686 --disable-gnu-indirect-function --disable-bootstrap --disable-checking --disable-gnu-unique-object
   - make
   - cd ../..
-artifacts:
-  - path: 'build/build-gcc/config.log'
+on_failure:
+  - appveyor PushArtifact build/build-gcc/config.log
