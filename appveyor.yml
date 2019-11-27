@@ -9,8 +9,8 @@ build_script:
   - cd gcc-7.4.0
   - mkdir build
   - cd build
-  - ../libstdc++-v3/configure --disable-shared
+  - ../libstdc++-v3/configure --disable-shared --with-multilib-list=m32
   - make -j
   - cd ../..
 artifacts:
-  - path: 'gcc-7.4.0/32/build/src/.libs/libstdc++.a'
+  - path: 'gcc-7.4.0/32/build/src/.libs/*.*'
