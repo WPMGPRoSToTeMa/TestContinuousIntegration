@@ -15,4 +15,4 @@ build_script:
   - cd ../..
 artifacts:
   - path: build-gcc/32/build-libstdc++/src/.libs/libstdc++.a
-  - path: build-gcc/32/build-libstdc++/libsupc++/src/.libs/libsupc++.a
+  - path: build-gcc/32/build-libstdc++/libsupc++/.libs/libsupc++.a
