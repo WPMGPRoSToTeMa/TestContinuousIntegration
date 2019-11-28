@@ -14,4 +14,4 @@ build_script:
   - make
   - cd ../..
 artifacts:
-  - path: build-gcc/32/build/src/.libs/libstdc++.a
+  - path: build-gcc/32/build-libstdc++/src/.libs/libstdc++.a
