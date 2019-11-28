@@ -12,6 +12,7 @@ build_script:
   - cd build
   - mkdir build-gcc
   - cd build-gcc
+  - chmod 755 ../../gcc-7.4.0/libgcc/configure
   - ../../gcc-7.4.0/libgcc/configure --help
   - make
   - cd ../..
