@@ -12,7 +12,6 @@ build_script:
   - cd build
   - mkdir build-gcc
   - cd build-gcc
-  - ../../gcc-7.4.0/configure --with-multilib-list=m32 --disable-shared --enable-languages=c,c++ --disable-host-shared --enable-threads=posix --disable-gnu-indirect-function --disable-checking --disable-gnu-unique-object --disable-bootstrap
   - ../../gcc-7.4.0/libgcc/configure --help
   - make
   - cd ../..
