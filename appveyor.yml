@@ -10,7 +10,7 @@ build_script:
   - cd build-gcc
   - mkdir build-libstdc++
   - cd build-libstdc++
-  - ../../gcc-7.4.0/libstdc++-v3/configure --enable-multilib --enable-clocale --enable-threads=posix --enable-libstdcxx-threads --enable-libstdcxx-time=rt --enable-cxx-flags='-O3 -flto=jobserver -fno-fat-lto-objects -fno-PIC -fno-gnu-unique -fvisibility=hidden' --disable-libstdcxx-visibility --disable-libstdcxx-verbose --disable-shared --disable-vtable-verify
+  - ../../gcc-7.4.0/libstdc++-v3/configure --enable-multilib --enable-clocale --enable-threads=posix --enable-libstdcxx-threads --enable-libstdcxx-time=rt --enable-cxx-flags='-O3 -flto=jobserver -fno-fat-lto-objects -fno-PIC -fno-gnu-unique -fvisibility=hidden -fvisibility-inlines-hidden' --disable-libstdcxx-visibility --disable-libstdcxx-verbose --disable-shared --disable-vtable-verify
   - make
   - cd ../..
 artifacts:
