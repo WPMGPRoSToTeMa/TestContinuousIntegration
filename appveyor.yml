@@ -7,6 +7,7 @@ build_script:
   - wget https://ftp.gnu.org/gnu/gcc/gcc-7.4.0/gcc-7.4.0.tar.gz
   - tar -xf gcc-7.4.0.tar.gz
   - find gcc-7.4.0/libstdc++-v3/libsupc++ -type f -exec sed -i '/^#pragma GCC visibility/ s/^/\/\//' {} \;
+  - sed -i 's/_GLIBCXX_WEAK_DEFINITION//' gcc-7.4.0/libstdc++-v3/libsupc++/del_op.cc
   - mkdir build-gcc
   - cd build-gcc
   - mkdir build-libstdc++
