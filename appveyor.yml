@@ -1,10 +1,14 @@
 environment:
   matrix:
   - job_name: Linux Ubuntu1804
-    job_depends_on: Linux Ubuntu1604
+    job_depends_on: Linux Ubuntu1604, Linux Ubuntu 1804_2
     appveyor_build_worker_image: Ubuntu
   - job_name: Linux Ubuntu1604
     appveyor_build_worker_image: Ubuntu1604
+  - job_name: Linux Ubuntu1804_2
+    appveyor_build_worker_image: Ubuntu1804
+matrix:
+  fast_finish: true
 install:
   - sudo apt-get update
   - sudo apt-get --assume-yes install gcc-multilib g++-multilib
