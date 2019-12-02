@@ -1,5 +1,6 @@
 image:
   - Ubuntu
+  - Ubuntu1604
 install:
   - sudo apt-get update
   - sudo apt-get --assume-yes install gcc-multilib g++-multilib
