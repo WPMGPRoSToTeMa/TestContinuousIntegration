@@ -17,14 +17,8 @@ matrix:
     - job_name: Linux Ubuntu1604
     - job_name: Linux Ubuntu1804_2
 install:
-  - ps: >-
-      Write-Host $env:appveyor_api_url
-      Write-Host $env:appveyor_account_name
-      Write-Host $env:appveyor_project_id
-      Write-Host $env:appveyor_project_name
-      Write-Host $env:appveyor_project_slug
-      Write-Host $env:appveyor_build_id
-      Write-Host $env:appveyor_build_number
+  - ps: -
+      Write-Host "$env:appveyor_url/api/projects/$env:appveyor_account_name/$env:appveyor_project_slug/builds/$env:appveyor_build_id"
   - sudo apt-get update
   - sudo apt-get --assume-yes install gcc-multilib g++-multilib
 build_script:
