@@ -7,7 +7,7 @@ environment:
   - job_name: Linux Ubuntu1604
     job_group: Build
     job_allow_cancellation: false
-    appveyor_build_worker_image: Ubuntu1604
+    appveyor_build_worker_image: Ubuntu1804
   - job_name: Linux Ubuntu1804_2
     job_group: Build
     job_allow_cancellation: false
